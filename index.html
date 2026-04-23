@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PPT Voice Explainer</title>
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            font-family: Arial;
+            color: white;
+            text-align: center;
+        }
+
+        #topbar {
+            padding: 10px;
+            background: #111;
+        }
+
+        #viewer {
+            width: 100%;
+            height: 100vh;
+        }
+
+        #slideImage {
+            width: 100%;
+            height: 80vh;
+            object-fit: contain;
+        }
+
+        #explanation {
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="topbar">
+    <input type="file" id="fileInput">
+    <button onclick="upload()">Start Presentation</button>
+</div>
+
+<div id="viewer">
+    <img id="slideImage">
+    <audio id="audioPlayer"></audio>
+    <p id="explanation"></p>
+
+    <div>
+        <button onclick="prevSlide()">Prev</button>
+        <button onclick="nextSlide()">Next</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
